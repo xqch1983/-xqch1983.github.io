@@ -51,9 +51,15 @@
     + [TVM之relay.build流程解读](https://zhuanlan.zhihu.com/p/348696198)
     + [TVM之graph_runtime](https://zhuanlan.zhihu.com/p/345085746)
     + [TVM之tir 转换成llvm ir]()
+
+
+        ![tvm_relay_build_process](./tvm-relay-build-process.jpg)
+
+    
     + [TVM之设计模式解读（二）--责任链模式]()
     + [TVM之设计模式解读（一）--visitor模式]()
     + [TVM之设计模式解读（三）-单例模式,模板方法模式]()
 
-
-    
+* 可以用TVM做什么
+    + 从使用者的角度来说，用TVM就是为了加速模型在某些硬件后端的推理速度；如果TVM不支持某些后端，使用者将转变为开发者，利用TVM已经提供的一些统一表示和基础设施，自己完成：在Relay层添加自己的operator、使用TVM提供的Pass Infra写一个自定义pass实现一些分析和IR Transformation、定义自己的DataType、添加一个新后端、添加自己的后端的codegen、在后端利用Tensorize机制用手工写的代码替代自动生成的代码。
+    [漫游深度学习编译器](https://zhuanlan.zhihu.com/p/381324332)
